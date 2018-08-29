@@ -68,6 +68,8 @@ function CSSTextGenerator(colors) {
   const tintRatio = 0.1;
 
   return `
+
+
     --ion-color-base: ${light};
     --ion-color-contrast: ${dark};
     --ion-background-color: ${light};
@@ -132,7 +134,7 @@ function CSSTextGenerator(colors) {
     --ion-color-medium-contrast-rgb: 255,255,255;
     --ion-color-medium-shade: ${Color(medium).darken(shadeRatio)};
     --ion-color-medium-tint: ${Color(medium).lighten(tintRatio)};
-    
+
     --ion-color-light: ${light};
     --ion-color-light-rgb: 244,244,244;
     --ion-color-light-contrast: $${contrast(light)};

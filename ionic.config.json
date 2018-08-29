@@ -1,6 +1,8 @@
 {
   "name": "ionic-themeroller-sample",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "pro_id": "2c0f042f"
 }

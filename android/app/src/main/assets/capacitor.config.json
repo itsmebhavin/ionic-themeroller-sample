@@ -1,0 +1,6 @@
+{
+  "appId": "edu.ua.caps.ionicsample",
+  "appName": "ionic-themeroller-sample",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

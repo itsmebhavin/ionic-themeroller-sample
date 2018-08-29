@@ -26,6 +26,15 @@
     <ion-button color="danger">Danger</ion-button>
 
     <hr>
+    <ion-item>
+        <ion-label>Hair Color</ion-label>
+        <ion-select value="brown" ok-text="Okay" cancel-text="Dismiss">
+            <ion-select-option value="brown">Brown</ion-select-option>
+            <ion-select-option value="blonde">Blonde</ion-select-option>
+            <ion-select-option value="black">Black</ion-select-option>
+            <ion-select-option value="red">Red</ion-select-option>
+        </ion-select>
+    </ion-item>
     <!-- <ion-action-sheet-controller></ion-action-sheet-controller> -->
 
     <ion-button expand="block" id="basic" (click)="presentActionSheet()">Basic</ion-button>
@@ -47,7 +56,7 @@
     <ion-badge color="medium">88</ion-badge>
     <ion-badge color="dark">99</ion-badge>
 
-    <hr/>
+    <hr />
     <p>Checkbox</p>
     <ion-checkbox color="primary" checked></ion-checkbox>
     <ion-checkbox color="secondary" checked></ion-checkbox>

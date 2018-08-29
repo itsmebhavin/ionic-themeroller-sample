@@ -1,7 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ThemeService } from "../_services/theme/theme.service";
 import { ActionSheetController, AlertController } from "@ionic/angular";
-
+import { Storage } from "@ionic/storage";
+import { Platform, NavController, LoadingController } from "@ionic/angular";
+import { SplashScreen } from "@ionic-native/splash-screen/ngx";
+import { StatusBar } from "@ionic-native/status-bar/ngx";
+import { Router, ActivatedRoute } from "@angular/router";
 const themes = {
   autumn: {
     primary: "#F78154",
@@ -34,16 +38,63 @@ const themes = {
   templateUrl: "home.page.html",
   styleUrls: ["home.page.scss"]
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  introShown = false;
+  rootPage: any = "home";
+  private sub: any;
+  dontcheckintroflag = false;
+
   constructor(
     private theme: ThemeService,
     public actionSheetController: ActionSheetController,
-    public alertController: AlertController
+    public alertController: AlertController,
+    private platform: Platform,
+    private loadingCtrl: LoadingController,
+    private splashScreen: SplashScreen,
+    private statusBar: StatusBar,
+    private storage: Storage,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
-  // presentBasic() {
-  //   return await presentActionSheet();
-  // }
+  ngOnInit() {
+    // console.log("inside ngOnInit from Home Component");
+    this.sub = this.route.params.subscribe(params => {
+      this.dontcheckintroflag = params["dontcheckintroflag"];
+    });
+    this.storage.ready().then(() => {
+      // console.log(
+      //   "Now in value of Don'tCheckIntroFlag in Home c'tor = ",
+      //   this.dontcheckintroflag
+      // );
+      if (!this.dontcheckintroflag) {
+        this.initializeApp();
+      } else {
+        this.statusBar.styleDefault();
+        this.splashScreen.hide();
+      }
+    });
+  }
+
+  initializeApp() {
+    // console.log("Inside initializing app from app component.");
+
+    this.platform.ready().then(() => {
+      // console.log("Platform is ready now.");
+      // console.log("Checking if we have to navigate to Intro Page or not.");
+      this.storage.get("introShown").then(result => {
+        // console.log("We found introShown value = ", result);
+        if (!result) {
+          // console.log("Let's goto Intro Page");
+          this.router.navigate(["intro"]);
+        } else {
+          this.statusBar.styleDefault();
+          this.splashScreen.hide();
+        }
+      });
+    });
+  }
+
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: "Albums",
