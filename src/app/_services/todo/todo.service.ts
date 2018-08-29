@@ -4,7 +4,7 @@ interface Todo {
   id: string;
   title: string;
   description: string;
-  value: number;
+  value: string;
 }
 
 @Injectable()
