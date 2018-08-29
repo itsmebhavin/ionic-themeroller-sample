@@ -1,15 +1,15 @@
-## IONIC Compilation Process
+# IONIC Compilation Process
 
-# Compiling locally
+## Compiling locally
 
     - npm install
     - npm run build
     - ionic serve -c
     - [This should run localhost]
 
-## Capacitor Compilation Process
+# Capacitor Compilation Process
 
-# Compiling PWA
+## Compiling PWA
 
     - npm install --save @capacitor/core @capacitor/cli
     - npx cap init
@@ -21,26 +21,26 @@
     - npx cap copy web
     - npx cap serve
 
-# Compiling iOS
+## Compiling iOS
 
     - npx cap add ios
     - npx cap copy ios
     - npx cap open ios
 
-# Compiling Android
+## Compiling Android
 
     - npx cap add android
     - npx cap copy android
     - npx cap open android
 
-# Compiling electron
+## Compiling electron
 
     - npx cap add electron
     - npx cap copy electron
     - cd electron
     - npm run electron:start
 
-# Commands to remember for later use
+## Commands to remember for later use
 
     - $ npx cap copy
     - $ npx cap open
