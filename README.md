@@ -1,3 +1,12 @@
+## IONIC Compilation Process
+
+# Compiling locally
+
+    - npm install
+    - npm run build
+    - ionic serve -c
+    - [This should run localhost]
+
 ## Capacitor Compilation Process
 
 # Compiling PWA
