@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            {{ todo?.title }}
+        </ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <p>{{ todo?.description }}</p>
+    <p style="font-size: 10em;text-align: center">
+        {{todo?.value}}
+    </p>
+</ion-content>

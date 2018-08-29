@@ -69,6 +69,10 @@
 
 
     <ion-card>
-
+        <ion-list no-lines>
+            <ion-item [href]="'/tododetail/' + todo.id" detail="true" *ngFor="let todo of todoService.todos">
+                <ion-label>{{ todo.title }}</ion-label>
+            </ion-item>
+        </ion-list>
     </ion-card>
 </ion-content>

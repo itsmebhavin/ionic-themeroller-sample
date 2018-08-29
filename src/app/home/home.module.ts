@@ -1,3 +1,4 @@
+import { TodoService } from '../_services/todo/todo.service';
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { IonicModule } from "@ionic/angular";
@@ -17,6 +18,9 @@ import { HomePage } from "./home.page";
         component: HomePage
       }
     ])
+  ],
+  providers: [
+    TodoService
   ],
   declarations: [HomePage]
 })

@@ -5,6 +5,8 @@ import { Storage } from "@ionic/storage";
 import { Platform, NavController, LoadingController } from "@ionic/angular";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { Router, ActivatedRoute } from "@angular/router";
+import { TodoService } from "../_services/todo/todo.service";
+
 const themes = {
   autumn: {
     primary: "#F78154",
@@ -41,7 +43,8 @@ export class HomePage implements OnInit {
   constructor(
     private theme: ThemeService,
     public actionSheetController: ActionSheetController,
-    public alertController: AlertController
+    public alertController: AlertController,
+    private todoService: TodoService
   ) {}
 
   ngOnInit() {}

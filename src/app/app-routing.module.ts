@@ -10,7 +10,11 @@ const routes: Routes = [
   { path: "Intro", component: IntroComponent },
   { path: "Splash", loadChildren: "./splash/splash.module#SplashPageModule" },
   { path: "Login", loadChildren: "./login/login.module#LoginPageModule" },
-  { path: "Login/:dontcheckintroflag", component: LoginPage }
+  { path: "Login/:dontcheckintroflag", component: LoginPage },
+  {
+    path: "tododetail/:id",
+    loadChildren: "./tododetail/tododetail.module#TododetailPageModule"
+  }
 ];
 
 @NgModule({
