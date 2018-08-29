@@ -13,6 +13,8 @@ import { IntroComponent } from "./intro/intro.component";
 import { HomePageModule } from "./home/home.module";
 import { SplashPageModule } from "./splash/splash.module";
 import { LoginPageModule } from "./login/login.module";
+import { ServicesModule } from "./_services/services.module";
+
 @NgModule({
   declarations: [AppComponent, IntroComponent],
   entryComponents: [],
@@ -23,7 +25,8 @@ import { LoginPageModule } from "./login/login.module";
     AppRoutingModule,
     HomePageModule,
     SplashPageModule,
-    LoginPageModule
+    LoginPageModule,
+    ServicesModule
   ],
   providers: [
     StatusBar,
