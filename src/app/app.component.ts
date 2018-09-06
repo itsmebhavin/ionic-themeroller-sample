@@ -21,9 +21,6 @@ export class AppComponent implements OnInit {
     this.changeTheme(this.currentTheme)
   }
   changeTheme(name = '') {
-    // this.theme.setTheme(themes[name]);
     this.theme.setThemeByName(name);
-    // this.currentTheme = (name.length === 0) ? { dontSet: false } : { [name]: true };
-    // this.setGlobalTheme();
   }
 }
