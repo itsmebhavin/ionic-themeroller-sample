@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { ThemeService } from "../_services/theme/theme.service";
 import { ActionSheetController, AlertController } from "@ionic/angular";
 import { Storage } from "@ionic/storage";
 import { Platform, NavController, LoadingController } from "@ionic/angular";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { Router, ActivatedRoute } from "@angular/router";
 import { TodoService } from "../_services/todo/todo.service";
+import { ThemeService } from "../_services/theme/theme.service";
 
 const themes = {
   autumn: {
@@ -39,26 +39,14 @@ const themes = {
   templateUrl: "home.page.html",
   styleUrls: ["home.page.scss"]
 })
-export class HomePage implements OnInit {
+export class HomePage{
   constructor(
     private theme: ThemeService,
     public actionSheetController: ActionSheetController,
     public alertController: AlertController,
     private todoService: TodoService
   ) {}
-  currentTheme;
-  ngOnInit() {
-    this.setGlobalTheme();
-  }
-  async setGlobalTheme(){
-    this.currentTheme = await this.theme.storedThemeName.then(x => {
-      let themeName = (x.length === 0) ? { dontSet: false } : { [x]: true };
-      console.log(themeName);
-      console.log('x', x);
-      return themeName;
-    });
-    console.log(this.currentTheme);
-  }
+ 
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
@@ -131,10 +119,7 @@ export class HomePage implements OnInit {
     await alert.present();
   }
 
-  changeTheme(name) {
-    // this.theme.setTheme(themes[name]);
+  changeTheme(name = '') {
     this.theme.setThemeByName(name);
-    this.currentTheme = (name.length === 0) ? { dontSet: false } : { [name]: true };
-    // this.setGlobalTheme();
   }
 }

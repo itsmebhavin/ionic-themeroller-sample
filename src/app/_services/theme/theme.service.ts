@@ -24,6 +24,10 @@ export class ThemeService {
   }
   setThemeByName(name){
     this.storage.set('themeName', name);
+    const bodyNode = this.document.body;
+    bodyNode.removeAttribute('class');
+    bodyNode.classList.add(name);
+    console.log('change theme');
   }
   // Define a single CSS variable
   setVariable(name, value) {
@@ -31,7 +35,7 @@ export class ThemeService {
   }
 
   private setGlobalCSS(css: string) {
-    this.document.documentElement.style.cssText = css;
+    this.document.documentElement.style.cssText = css;    
   }
 
   get storedTheme() {
