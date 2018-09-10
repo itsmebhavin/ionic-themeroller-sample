@@ -16,10 +16,14 @@ const routes: Routes = [
     loadChildren: "./home/home.module#HomePageModule",
     canActivate: [AuthGuardService]
   },
-
   {
     path: "tododetail/:id",
     loadChildren: "./tododetail/tododetail.module#TododetailPageModule",
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: "Barcode",
+    loadChildren: "./barcode/barcode.module#BarcodePageModule",
     canActivate: [AuthGuardService]
   }
 ];

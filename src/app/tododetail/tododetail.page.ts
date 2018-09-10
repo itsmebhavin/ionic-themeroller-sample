@@ -1,4 +1,4 @@
-import { OnInit, Component } from "@angular/core";
+import { OnInit, Component, AfterViewInit, ViewChild } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { TodoService } from "../_services/todo/todo.service";
 
@@ -8,17 +8,14 @@ import { TodoService } from "../_services/todo/todo.service";
   styleUrls: ["./tododetail.page.scss"]
 })
 export class TododetailPage implements OnInit {
-  private todo;
+  public todo;
 
-  constructor(
-    private route: ActivatedRoute,
-    private todoService: TodoService
-  ) {}
+  constructor(public route: ActivatedRoute, public todoService: TodoService) {}
 
   ngOnInit() {}
 
   ionViewWillEnter() {
-    let todoId = this.route.snapshot.paramMap.get("id");
+    const todoId = this.route.snapshot.paramMap.get("id");
     this.todo = this.todoService.getTodo(todoId);
   }
 }

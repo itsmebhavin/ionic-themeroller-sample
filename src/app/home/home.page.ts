@@ -44,17 +44,18 @@ export class HomePage implements OnInit {
     private theme: ThemeService,
     public actionSheetController: ActionSheetController,
     public alertController: AlertController,
-    private todoService: TodoService
+    public todoService: TodoService,
+    public router: Router
   ) {}
   currentTheme;
   ngOnInit() {
     this.setGlobalTheme();
   }
-  async setGlobalTheme(){
+  async setGlobalTheme() {
     this.currentTheme = await this.theme.storedThemeName.then(x => {
-      let themeName = (x.length === 0) ? { dontSet: false } : { [x]: true };
+      const themeName = x.length === 0 ? { dontSet: false } : { [x]: true };
       console.log(themeName);
-      console.log('x', x);
+      console.log("x", x);
       return themeName;
     });
     console.log(this.currentTheme);
@@ -134,7 +135,12 @@ export class HomePage implements OnInit {
   changeTheme(name) {
     // this.theme.setTheme(themes[name]);
     this.theme.setThemeByName(name);
-    this.currentTheme = (name.length === 0) ? { dontSet: false } : { [name]: true };
+    this.currentTheme =
+      name.length === 0 ? { dontSet: false } : { [name]: true };
     // this.setGlobalTheme();
+  }
+
+  searchBarcode() {
+    this.router.navigate(["Barcode"]);
   }
 }

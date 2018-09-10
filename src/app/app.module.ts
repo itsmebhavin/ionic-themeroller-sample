@@ -14,6 +14,10 @@ import { HomePageModule } from "./home/home.module";
 import { SplashPageModule } from "./splash/splash.module";
 import { LoginPageModule } from "./login/login.module";
 import { ServicesModule } from "./_services/services.module";
+import { Capacitor } from "@capacitor/core";
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { environment } from "../environments/environment";
+import { BarcodePageModule } from "./barcode/barcode.module";
 
 @NgModule({
   declarations: [AppComponent, IntroComponent],
@@ -26,7 +30,11 @@ import { ServicesModule } from "./_services/services.module";
     HomePageModule,
     SplashPageModule,
     LoginPageModule,
-    ServicesModule
+    ServicesModule,
+    BarcodePageModule,
+    ServiceWorkerModule.register("ngsw-worker.js", {
+      enabled: environment.production
+    })
   ],
   providers: [
     StatusBar,

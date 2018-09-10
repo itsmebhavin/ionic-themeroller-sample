@@ -50,3 +50,7 @@
     - $ npm install really-cool-plugin
     - $ npx cap update // after plugin install
     - $ npx cap sync
+
+##### Author
+
+[This is a sample code from referring multiple articles from various forums.]
