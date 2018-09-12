@@ -121,5 +121,6 @@ export class HomePage{
 
   changeTheme(name = '') {
     this.theme.setThemeByName(name);
+    this.theme.onThemeChanged.emit(name);
   }
 }
