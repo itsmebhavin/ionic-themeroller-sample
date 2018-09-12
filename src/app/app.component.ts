@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   currentTheme;
   ngOnInit() {
     this.setGlobalTheme();
+    this.theme.onThemeChanged.subscribe(x => { this.themeChange(x) });
   }
   async setGlobalTheme() {
     this.currentTheme = await this.theme.storedThemeName.then(x => x);
@@ -22,5 +23,8 @@ export class AppComponent implements OnInit {
   }
   changeTheme(name = '') {
     this.theme.setThemeByName(name);
+  }
+  themeChange($event) {
+    this.currentTheme = $event;
   }
 }
