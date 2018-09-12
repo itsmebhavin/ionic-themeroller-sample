@@ -1,6 +1,6 @@
 {
-  "appId": "com.example.app",
-  "appName": "App",
-  "bundledWebRuntime": false,
+  "appId": "com.ua.caps.ionicthemeroller",
+  "appName": "ionic-themeroller-sample",
+  "bundledWebRuntime": true,
   "webDir": "www"
 }

@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>barcode</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div *ngIf="barcode">
+        <label type="success">
+            {{ barcode }}
+        </label>
+    </div>
+    <ion-button color="success" (click)="startScanner()">
+        Scan
+    </ion-button>
+
+    <div class="input-group">
+        <div id="inputBarcode" style="position: static">
+            <div id="interactive" class="viewport"></div>
+        </div>
+    </div>
+</ion-content>

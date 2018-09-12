@@ -9,6 +9,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./intro.component.scss"]
 })
 export class IntroComponent implements OnInit {
+  introShown = false;
   mySlideOptions = {
     initialSlide: 0,
     loop: false

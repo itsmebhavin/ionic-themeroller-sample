@@ -20,11 +20,6 @@ export class ThemeService {
     this.storage.set('themeName', name);
   }
 
-
-
-  get storedTheme() {
-    return this.storage.get("theme");
-  }
   get storedThemeName() {
     return this.storage.get("themeName");
   }

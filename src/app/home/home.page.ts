@@ -44,7 +44,8 @@ export class HomePage{
     private theme: ThemeService,
     public actionSheetController: ActionSheetController,
     public alertController: AlertController,
-    private todoService: TodoService
+    public todoService: TodoService,
+    public router: Router
   ) {}
  
 
@@ -122,5 +123,9 @@ export class HomePage{
   changeTheme(name = '') {
     this.theme.setThemeByName(name);
     this.theme.onThemeChanged.emit(name);
+  }
+
+  searchBarcode() {
+    this.router.navigate(["Barcode"]);
   }
 }

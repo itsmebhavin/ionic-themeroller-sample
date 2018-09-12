@@ -1,0 +1,995 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ionic-themeroller-sample documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top visible-xs">
+        <a href="../" class="navbar-brand">ionic-themeroller-sample documentation</a>
+        <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+    </div>
+
+    <div class="xs-menu menu" id="mobile-menu">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search">
+        </div>
+        <compodoc-menu></compodoc-menu>
+    </div>
+
+    <div class="container-fluid main">
+        <div class="row main">
+            <div class="hidden-xs menu">
+                <compodoc-menu mode="normal"></compodoc-menu>
+            </div>
+            <!-- START CONTENT -->
+            <div class="content component">
+                <div class="content-data">
+
+
+
+
+                    <ol class="breadcrumb">
+                        <li>Components</li>
+                        <li>HomePage</li>
+                    </ol>
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active">
+                            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+                        </li>
+                        <li>
+                            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+                        </li>
+                        <li>
+                            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+                        </li>
+                        <li>
+                            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="c-info">
+                            <p class="comment">
+                                <h3>File</h3>
+                            </p>
+                            <p class="comment">
+                                <code>src/app/home/home.page.ts</code>
+                            </p>
+
+
+
+                            <p class="comment">
+                                <h3>Implements</h3>
+                            </p>
+                            <p class="comment">
+                                <code><a href="https://angular.io/api/core/OnInit" target="_blank">OnInit</a></code>
+                            </p>
+
+
+                            <section>
+                                <h3>Metadata</h3>
+                                <table class="table table-sm table-hover">
+                                    <tbody>
+
+
+
+
+
+
+
+
+
+
+
+                                        <tr>
+                                            <td class="col-md-3">selector</td>
+                                            <td class="col-md-9"><code>app-home</code></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="col-md-3">styleUrls</td>
+                                            <td class="col-md-9"><code>home.page.scss</code></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td class="col-md-3">templateUrl</td>
+                                            <td class="col-md-9"><code>home.page.html</code></td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </section>
+
+                            <section>
+                                <h3 id="index">Index</h3>
+                                <table class="table table-sm table-bordered index-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <h6><b>Properties</b></h6>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <ul class="index-list">
+                                                    <li>
+                                                        <span class="modifier">Public</span>
+                                                        <a href="#actionSheetController">actionSheetController</a>
+                                                    </li>
+                                                    <li>
+                                                        <span class="modifier">Public</span>
+                                                        <a href="#alertController">alertController</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#currentTheme">currentTheme</a>
+                                                    </li>
+                                                    <li>
+                                                        <span class="modifier">Public</span>
+                                                        <a href="#todoService">todoService</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <h6><b>Methods</b></h6>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <ul class="index-list">
+                                                    <li>
+                                                        <a href="#changeTheme">changeTheme</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#ngOnInit">ngOnInit</a>
+                                                    </li>
+                                                    <li>
+                                                        <span class="modifier">Async</span>
+                                                        <a href="#presentActionSheet">presentActionSheet</a>
+                                                    </li>
+                                                    <li>
+                                                        <span class="modifier">Async</span>
+                                                        <a href="#presentAlertConfirm">presentAlertConfirm</a>
+                                                    </li>
+                                                    <li>
+                                                        <span class="modifier">Async</span>
+                                                        <a href="#setGlobalTheme">setGlobalTheme</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </section>
+
+                            <section>
+                                <h3 id="constructor">Constructor</h3>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <code>constructor(theme: <a href="../injectables/ThemeService.html">ThemeService</a>,
+                                                    actionSheetController: ActionSheetController, alertController:
+                                                    AlertController, todoService: <a href="../injectables/TodoService.html">TodoService</a>)</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/home/home.page.ts:42</a></div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div>
+                                                    <b>Parameters :</b>
+                                                    <table class="params">
+                                                        <thead>
+                                                            <tr>
+                                                                <td>Name</td>
+                                                                <td>Type</td>
+                                                                <td>Optional</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>theme</td>
+
+                                                                <td>
+                                                                    <code><a href="../injectables/ThemeService.html"
+                                                                            target="_self">ThemeService</a></code>
+                                                                </td>
+
+                                                                <td>
+                                                                    No
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>actionSheetController</td>
+
+                                                                <td>
+                                                                    <code>ActionSheetController</code>
+                                                                </td>
+
+                                                                <td>
+                                                                    No
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>alertController</td>
+
+                                                                <td>
+                                                                    <code>AlertController</code>
+                                                                </td>
+
+                                                                <td>
+                                                                    No
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>todoService</td>
+
+                                                                <td>
+                                                                    <code><a href="../injectables/TodoService.html"
+                                                                            target="_self">TodoService</a></code>
+                                                                </td>
+
+                                                                <td>
+                                                                    No
+                                                                </td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+
+
+
+
+
+                            <section>
+
+                                <h3 id="methods">
+                                    Methods
+                                </h3>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <a name="changeTheme"></a>
+                                                <span class="name">
+                                                    <b>
+                                                        changeTheme
+                                                    </b>
+                                                    <a href="#changeTheme"><span class="icon ion-ios-link"></span></a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <code>changeTheme(name: )</code>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">src/app/home/home.page.ts:134</a></div>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+
+                                                <div class="io-description">
+                                                    <b>Parameters :</b>
+                                                    <table class="params">
+                                                        <thead>
+                                                            <tr>
+                                                                <td>Name</td>
+                                                                <td>Optional</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>name</td>
+
+                                                                <td>
+                                                                    No
+                                                                </td>
+
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div>
+                                                </div>
+                                                <div class="io-description">
+                                                    <b>Returns : </b> <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html"
+                                                            target="_blank">void</a></code>
+
+                                                </div>
+                                                <div class="io-description">
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <a name="ngOnInit"></a>
+                                                <span class="name">
+                                                    <b>
+                                                        ngOnInit
+                                                    </b>
+                                                    <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <code>ngOnInit()</code>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/home/home.page.ts:50</a></div>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+
+                                                <div class="io-description">
+                                                    <b>Returns : </b> <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html"
+                                                            target="_blank">void</a></code>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <a name="presentActionSheet"></a>
+                                                <span class="name">
+                                                    <b>
+                                                        <span class="modifier">Async</span> presentActionSheet
+                                                </b>
+                                                <a href="#presentActionSheet"><span class="icon ion-ios-link"></span></a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <span class="modifier-icon icon ion-ios-reset"></span>
+                                                <code>presentActionSheet()</code>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/home/home.page.ts:63</a></div>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+
+                                                <div class="io-description">
+                                                    <b>Returns : </b> <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html"
+                                                            target="_blank">any</a></code>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <a name="presentAlertConfirm"></a>
+                                                <span class="name">
+                                                    <b>
+                                                        <span class="modifier">Async</span> presentAlertConfirm
+                                                </b>
+                                                <a href="#presentAlertConfirm"><span class="icon ion-ios-link"></span></a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <span class="modifier-icon icon ion-ios-reset"></span>
+                                                <code>presentAlertConfirm()</code>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/app/home/home.page.ts:109</a></div>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+
+                                                <div class="io-description">
+                                                    <b>Returns : </b> <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html"
+                                                            target="_blank">any</a></code>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <a name="setGlobalTheme"></a>
+                                                <span class="name">
+                                                    <b>
+                                                        <span class="modifier">Async</span> setGlobalTheme
+                                                </b>
+                                                <a href="#setGlobalTheme"><span class="icon ion-ios-link"></span></a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <span class="modifier-icon icon ion-ios-reset"></span>
+                                                <code>setGlobalTheme()</code>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/home/home.page.ts:53</a></div>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-4">
+
+                                                <div class="io-description">
+                                                    <b>Returns : </b> <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html"
+                                                            target="_blank">any</a></code>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+
+                            <section>
+
+                                <h3 id="inputs">
+                                    Properties
+                                </h3>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <a name="actionSheetController"></a>
+                                                <span class="name">
+                                                    <b>
+                                                        <span class="modifier">Public</span> actionSheetController
+                                                </b>
+                                                <a href="#actionSheetController"><span class="icon ion-ios-link"></span></a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <span class="modifier-icon icon ion-ios-reset"></span><code>actionSheetController:
+                                                    <code>ActionSheetController</code>
+                                                </code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <i>Type : </i> <code>ActionSheetController</code>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/home/home.page.ts:45</a></div>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <a name="alertController"></a>
+                                                <span class="name">
+                                                    <b>
+                                                        <span class="modifier">Public</span> alertController
+                                                </b>
+                                                <a href="#alertController"><span class="icon ion-ios-link"></span></a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <span class="modifier-icon icon ion-ios-reset"></span><code>alertController:
+                                                    <code>AlertController</code>
+                                                </code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <i>Type : </i> <code>AlertController</code>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/home/home.page.ts:46</a></div>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <a name="currentTheme"></a>
+                                                <span class="name">
+                                                    <b>
+                                                        currentTheme
+                                                    </b>
+                                                    <a href="#currentTheme"><span class="icon ion-ios-link"></span></a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <code>currentTheme: <code></code>
+                                                </code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/home/home.page.ts:49</a></div>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                                <table class="table table-sm table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <a name="todoService"></a>
+                                                <span class="name">
+                                                    <b>
+                                                        <span class="modifier">Public</span> todoService
+                                                </b>
+                                                <a href="#todoService"><span class="icon ion-ios-link"></span></a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <span class="modifier-icon icon ion-ios-reset"></span><code>todoService:
+                                                    <code><a href="../injectables/TodoService.html" target="_self">TodoService</a></code>
+                                                </code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <i>Type : </i> <code><a href="../injectables/TodoService.html" target="_self">TodoService</a></code>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/home/home.page.ts:47</a></div>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </section>
+
+                        </div>
+
+
+                        <div class="tab-pane fade  tab-source-code" id="c-source">
+                            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;;
+import { ThemeService } from &quot;../_services/theme/theme.service&quot;;
+import { ActionSheetController, AlertController } from &quot;@ionic/angular&quot;;
+import { Storage } from &quot;@ionic/storage&quot;;
+import { Platform, NavController, LoadingController } from &quot;@ionic/angular&quot;;
+import { StatusBar } from &quot;@ionic-native/status-bar/ngx&quot;;
+import { Router, ActivatedRoute } from &quot;@angular/router&quot;;
+import { TodoService } from &quot;../_services/todo/todo.service&quot;;
+
+const themes &#x3D; {
+  autumn: {
+    primary: &quot;#F78154&quot;,
+    secondary: &quot;#4D9078&quot;,
+    tertiary: &quot;#B4436C&quot;,
+    light: &quot;#FDE8DF&quot;,
+    medium: &quot;#FCD0A2&quot;,
+    dark: &quot;#B89876&quot;
+  },
+  night: {
+    primary: &quot;#8CBA80&quot;,
+    secondary: &quot;#FCFF6C&quot;,
+    tertiary: &quot;#FE5F55&quot;,
+    medium: &quot;#BCC2C7&quot;,
+    dark: &quot;#F7F7FF&quot;,
+    light: &quot;#495867&quot;
+  },
+  neon: {
+    primary: &quot;#39BFBD&quot;,
+    secondary: &quot;#4CE0B3&quot;,
+    tertiary: &quot;#FF5E79&quot;,
+    light: &quot;#F4EDF2&quot;,
+    medium: &quot;#B682A5&quot;,
+    dark: &quot;#34162A&quot;
+  }
+};
+
+@Component({
+  selector: &quot;app-home&quot;,
+  templateUrl: &quot;home.page.html&quot;,
+  styleUrls: [&quot;home.page.scss&quot;]
+})
+export class HomePage implements OnInit {
+  constructor(
+    private theme: ThemeService,
+    public actionSheetController: ActionSheetController,
+    public alertController: AlertController,
+    public todoService: TodoService
+  ) {}
+  currentTheme;
+  ngOnInit() {
+    this.setGlobalTheme();
+  }
+  async setGlobalTheme() {
+    this.currentTheme &#x3D; await this.theme.storedThemeName.then(x &#x3D;&gt; {
+      const themeName &#x3D; x.length &#x3D;&#x3D;&#x3D; 0 ? { dontSet: false } : { [x]: true };
+      console.log(themeName);
+      console.log(&quot;x&quot;, x);
+      return themeName;
+    });
+    console.log(this.currentTheme);
+  }
+
+  async presentActionSheet() {
+    const actionSheet &#x3D; await this.actionSheetController.create({
+      header: &quot;Albums&quot;,
+      buttons: [
+        {
+          text: &quot;Delete&quot;,
+          role: &quot;destructive&quot;,
+          icon: &quot;trash&quot;,
+          handler: () &#x3D;&gt; {
+            console.log(&quot;Delete clicked&quot;);
+          }
+        },
+        {
+          text: &quot;Share&quot;,
+          icon: &quot;share&quot;,
+          handler: () &#x3D;&gt; {
+            console.log(&quot;Share clicked&quot;);
+          }
+        },
+        {
+          text: &quot;Play (open modal)&quot;,
+          icon: &quot;arrow-dropright-circle&quot;,
+          handler: () &#x3D;&gt; {
+            console.log(&quot;Play clicked&quot;);
+          }
+        },
+        {
+          text: &quot;Favorite&quot;,
+          icon: &quot;heart&quot;,
+          handler: () &#x3D;&gt; {
+            console.log(&quot;Favorite clicked&quot;);
+          }
+        },
+        {
+          text: &quot;Cancel&quot;,
+          icon: &quot;close&quot;,
+          role: &quot;cancel&quot;,
+          handler: () &#x3D;&gt; {
+            console.log(&quot;Cancel clicked&quot;);
+          }
+        }
+      ]
+    });
+    await actionSheet.present();
+  }
+
+  async presentAlertConfirm() {
+    const alert &#x3D; await this.alertController.create({
+      header: &quot;Confirm!&quot;,
+      message: &quot;Message &lt;strong&gt;text&lt;/strong&gt;!!!&quot;,
+      buttons: [
+        {
+          text: &quot;Cancel&quot;,
+          role: &quot;cancel&quot;,
+          cssClass: &quot;secondary&quot;,
+          handler: blah &#x3D;&gt; {
+            console.log(&quot;Confirm Cancel: blah&quot;);
+          }
+        },
+        {
+          text: &quot;Okay&quot;,
+          handler: () &#x3D;&gt; {
+            console.log(&quot;Confirm Okay&quot;);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  changeTheme(name) {
+    // this.theme.setTheme(themes[name]);
+    this.theme.setThemeByName(name);
+    this.currentTheme &#x3D;
+      name.length &#x3D;&#x3D;&#x3D; 0 ? { dontSet: false } : { [name]: true };
+    // this.setGlobalTheme();
+  }
+}
+</code></pre>
+                        </div>
+
+                        <div class="tab-pane fade " id="c-templateData">
+                            <pre class="line-numbers"><code class="language-html">&lt;ion-header [ngClass]&#x3D;&quot;currentTheme&quot;&gt;
+    &lt;ion-toolbar&gt;
+        &lt;ion-title&gt;Home&lt;/ion-title&gt;
+    &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+&lt;div [ngClass]&#x3D;&quot;currentTheme&quot;&gt;Foo
+    &lt;/div&gt;
+&lt;ion-content padding [ngClass]&#x3D;&quot;currentTheme&quot;&gt;
+    The world is your oyster.
+    &lt;p&gt;If you get lost, the
+        &lt;a target&#x3D;&quot;_blank&quot; rel&#x3D;&quot;noopener&quot; href&#x3D;&quot;https://ionicframework.com/docs&quot;&gt;docs&lt;/a&gt; will be your guide.&lt;/p&gt;
+
+    &lt;ion-button expand&#x3D;&quot;block&quot; color&#x3D;&quot;medium&quot; (click)&#x3D;&quot;changeTheme(&#x27;autumn&#x27;)&quot;&gt;Autumn&lt;/ion-button&gt;
+    &lt;ion-button expand&#x3D;&quot;block&quot; color&#x3D;&quot;medium&quot; (click)&#x3D;&quot;changeTheme(&#x27;night&#x27;)&quot;&gt;Dark&lt;/ion-button&gt;
+    &lt;ion-button expand&#x3D;&quot;block&quot; color&#x3D;&quot;medium&quot; (click)&#x3D;&quot;changeTheme(&#x27;neon&#x27;)&quot;&gt;Neon&lt;/ion-button&gt;
+    &lt;ion-button expand&#x3D;&quot;block&quot; color&#x3D;&quot;medium&quot; (click)&#x3D;&quot;changeTheme(&#x27;&#x27;)&quot;&gt;Default&lt;/ion-button&gt;
+    &lt;hr&gt;
+
+    &lt;ion-button color&#x3D;&quot;primary&quot;&gt;Primary&lt;/ion-button&gt;
+    &lt;ion-button color&#x3D;&quot;secondary&quot;&gt;Secondary&lt;/ion-button&gt;
+    &lt;ion-button color&#x3D;&quot;tertiary&quot;&gt;Tertiary&lt;/ion-button&gt;
+    &lt;ion-button color&#x3D;&quot;medium&quot;&gt;Medium&lt;/ion-button&gt;
+    &lt;ion-button color&#x3D;&quot;dark&quot;&gt;Dark&lt;/ion-button&gt;
+
+    &lt;ion-button color&#x3D;&quot;success&quot;&gt;Success&lt;/ion-button&gt;
+    &lt;ion-button color&#x3D;&quot;warning&quot;&gt;Warning&lt;/ion-button&gt;
+    &lt;ion-button color&#x3D;&quot;danger&quot;&gt;Danger&lt;/ion-button&gt;
+
+    &lt;hr&gt;
+    &lt;ion-item&gt;
+        &lt;ion-label&gt;Hair Color&lt;/ion-label&gt;
+        &lt;ion-select value&#x3D;&quot;brown&quot; ok-text&#x3D;&quot;Okay&quot; cancel-text&#x3D;&quot;Dismiss&quot;&gt;
+            &lt;ion-select-option value&#x3D;&quot;brown&quot;&gt;Brown&lt;/ion-select-option&gt;
+            &lt;ion-select-option value&#x3D;&quot;blonde&quot;&gt;Blonde&lt;/ion-select-option&gt;
+            &lt;ion-select-option value&#x3D;&quot;black&quot;&gt;Black&lt;/ion-select-option&gt;
+            &lt;ion-select-option value&#x3D;&quot;red&quot;&gt;Red&lt;/ion-select-option&gt;
+        &lt;/ion-select&gt;
+    &lt;/ion-item&gt;
+    &lt;!-- &lt;ion-action-sheet-controller&gt;&lt;/ion-action-sheet-controller&gt; --&gt;
+
+    &lt;ion-button expand&#x3D;&quot;block&quot; id&#x3D;&quot;basic&quot; (click)&#x3D;&quot;presentActionSheet()&quot;&gt;Basic&lt;/ion-button&gt;
+    &lt;ion-button expand&#x3D;&quot;block&quot; color&#x3D;&quot;success&quot; (click)&#x3D;&quot;presentAlertConfirm()&quot;&gt;Alert/Confirm&lt;/ion-button&gt;
+
+
+    &lt;p&gt;Cocket fiddley moorsom system whipstaff saintoise cathead leeway shahbandar royal dorade box jurymast permeability trailboard harbor forestay constant bearing. Small craft advisory parrel rowlock shrouds coxswain
+    &lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;p&gt;Badge&lt;/p&gt;
+    &lt;ion-badge color&#x3D;&quot;primary&quot;&gt;11&lt;/ion-badge&gt;
+    &lt;ion-badge color&#x3D;&quot;secondary&quot;&gt;22&lt;/ion-badge&gt;
+    &lt;ion-badge color&#x3D;&quot;tertiary&quot;&gt;33&lt;/ion-badge&gt;
+    &lt;ion-badge color&#x3D;&quot;success&quot;&gt;44&lt;/ion-badge&gt;
+    &lt;ion-badge color&#x3D;&quot;warning&quot;&gt;55&lt;/ion-badge&gt;
+    &lt;ion-badge color&#x3D;&quot;danger&quot;&gt;66&lt;/ion-badge&gt;
+    &lt;ion-badge color&#x3D;&quot;light&quot;&gt;77&lt;/ion-badge&gt;
+    &lt;ion-badge color&#x3D;&quot;medium&quot;&gt;88&lt;/ion-badge&gt;
+    &lt;ion-badge color&#x3D;&quot;dark&quot;&gt;99&lt;/ion-badge&gt;
+
+    &lt;hr /&gt;
+    &lt;p&gt;Checkbox&lt;/p&gt;
+    &lt;ion-checkbox color&#x3D;&quot;primary&quot; checked&gt;&lt;/ion-checkbox&gt;
+    &lt;ion-checkbox color&#x3D;&quot;secondary&quot; checked&gt;&lt;/ion-checkbox&gt;
+    &lt;ion-checkbox color&#x3D;&quot;danger&quot; checked&gt;&lt;/ion-checkbox&gt;
+    &lt;ion-checkbox color&#x3D;&quot;dark&quot; checked&gt;&lt;/ion-checkbox&gt;
+    &lt;ion-checkbox color&#x3D;&quot;success&quot; checked&gt;&lt;/ion-checkbox&gt;
+    &lt;ion-checkbox color&#x3D;&quot;warning&quot; checked&gt;&lt;/ion-checkbox&gt;
+    &lt;ion-checkbox color&#x3D;&quot;medium&quot; checked&gt;&lt;/ion-checkbox&gt;
+    &lt;hr&gt;
+
+
+    &lt;ion-card&gt;
+        &lt;ion-list no-lines&gt;
+            &lt;ion-item [href]&#x3D;&quot;&#x27;/tododetail/&#x27; + todo.id&quot; detail&#x3D;&quot;true&quot; *ngFor&#x3D;&quot;let todo of todoService.todos&quot;&gt;
+                &lt;ion-label&gt;{{ todo.title }}&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+        &lt;/ion-list&gt;
+    &lt;/ion-card&gt;
+&lt;/ion-content&gt;</code></pre>
+                        </div>
+
+                        <div class="tab-pane fade " id="c-tree">
+                            <div id="tree-container"></div>
+                            <div class="tree-legend">
+                                <div class="title">
+                                    <b>Legend</b>
+                                </div>
+                                <div>
+                                    <div class="color htmlelement"></div><span>Html element</span>
+                                </div>
+                                <div>
+                                    <div class="color component"></div><span>Component</span>
+                                </div>
+                                <div>
+                                    <div class="color directive"></div><span>Html element with directive</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <script src="../js/libs/vis.min.js"></script>
+                    <script src="../js/libs/htmlparser.js"></script>
+                    <script src="../js/libs/deep-iterator.js"></script>
+                    <script>
+                        var COMPONENT_TEMPLATE =
+                            '<div><ion-header [ngClass]="currentTheme">    <ion-toolbar>        <ion-title>Home</ion-title>    </ion-toolbar></ion-header><ion-content padding [ngClass]="currentTheme">    The world is your oyster.    <p>If you get lost, the        <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>    <ion-button expand="block" color="medium" (click)="changeTheme(\'autumn\')">Autumn</ion-button>    <ion-button expand="block" color="medium" (click)="changeTheme(\'night\')">Dark</ion-button>    <ion-button expand="block" color="medium" (click)="changeTheme(\'neon\')">Neon</ion-button>    <ion-button expand="block" color="medium" (click)="changeTheme(\'\')">Default</ion-button>    <hr>    <ion-button color="primary">Primary</ion-button>    <ion-button color="secondary">Secondary</ion-button>    <ion-button color="tertiary">Tertiary</ion-button>    <ion-button color="medium">Medium</ion-button>    <ion-button color="dark">Dark</ion-button>    <ion-button color="success">Success</ion-button>    <ion-button color="warning">Warning</ion-button>    <ion-button color="danger">Danger</ion-button>    <hr>    <ion-item>        <ion-label>Hair Color</ion-label>        <ion-select value="brown" ok-text="Okay" cancel-text="Dismiss">            <ion-select-option value="brown">Brown</ion-select-option>            <ion-select-option value="blonde">Blonde</ion-select-option>            <ion-select-option value="black">Black</ion-select-option>            <ion-select-option value="red">Red</ion-select-option>        </ion-select>    </ion-item>    <!-- <ion-action-sheet-controller></ion-action-sheet-controller> -->    <ion-button expand="block" id="basic" (click)="presentActionSheet()">Basic</ion-button>    <ion-button expand="block" color="success" (click)="presentAlertConfirm()">Alert/Confirm</ion-button>    <p>Cocket fiddley moorsom system whipstaff saintoise cathead leeway shahbandar royal dorade box jurymast permeability trailboard harbor forestay constant bearing. Small craft advisory parrel rowlock shrouds coxswain    </p>    <hr>    <p>Badge</p>    <ion-badge color="primary">11</ion-badge>    <ion-badge color="secondary">22</ion-badge>    <ion-badge color="tertiary">33</ion-badge>    <ion-badge color="success">44</ion-badge>    <ion-badge color="warning">55</ion-badge>    <ion-badge color="danger">66</ion-badge>    <ion-badge color="light">77</ion-badge>    <ion-badge color="medium">88</ion-badge>    <ion-badge color="dark">99</ion-badge>    <hr />    <p>Checkbox</p>    <ion-checkbox color="primary" checked></ion-checkbox>    <ion-checkbox color="secondary" checked></ion-checkbox>    <ion-checkbox color="danger" checked></ion-checkbox>    <ion-checkbox color="dark" checked></ion-checkbox>    <ion-checkbox color="success" checked></ion-checkbox>    <ion-checkbox color="warning" checked></ion-checkbox>    <ion-checkbox color="medium" checked></ion-checkbox>    <hr>    <ion-card>        <ion-list no-lines>            <ion-item [href]="\'/tododetail/\' + todo.id" detail="true" *ngFor="let todo of todoService.todos">                <ion-label>{{ todo.title }}</ion-label>            </ion-item>        </ion-list>    </ion-card></ion-content></div>'
+                        var COMPONENTS = [{
+                            'name': 'AppComponent',
+                            'selector': 'app-root'
+                        }, {
+                            'name': 'HomePage',
+                            'selector': 'app-home'
+                        }, {
+                            'name': 'IntroComponent',
+                            'selector': 'app-intro'
+                        }, {
+                            'name': 'LoginPage',
+                            'selector': 'app-login'
+                        }, {
+                            'name': 'SplashPage',
+                            'selector': 'app-splash'
+                        }, {
+                            'name': 'TododetailPage',
+                            'selector': 'app-tododetail'
+                        }];
+                        var DIRECTIVES = [];
+                        var ACTUAL_COMPONENT = {
+                            'name': 'HomePage'
+                        };
+                    </script>
+                    <script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="search-results">
+                    <div class="has-results">
+                        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+                        <ul class="search-results-list"></ul>
+                    </div>
+                    <div class="no-results">
+                        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT -->
+        </div>
+    </div>
+
+    <script>
+        var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+        var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+        var COMPODOC_CURRENT_PAGE_URL = 'HomePage.html';
+    </script>
+
+    <script src="../js/libs/custom-elements.min.js"></script>
+    <script src="../js/libs/lit-html.js"></script>
+    <script src="../js/menu-wc.js"></script>
+
+    <script src="../js/libs/bootstrap-native.js"></script>
+
+    <script src="../js/libs/es6-shim.min.js"></script>
+    <script src="../js/libs/EventDispatcher.js"></script>
+    <script src="../js/libs/promise.min.js"></script>
+    <script src="../js/libs/zepto.min.js"></script>
+
+    <script src="../js/compodoc.js"></script>
+
+    <script src="../js/tabs.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/libs/clipboard.min.js"></script>
+    <script src="../js/libs/prism.js"></script>
+    <script src="../js/sourceCode.js"></script>
+    <script src="../js/search/search.js"></script>
+    <script src="../js/search/lunr.min.js"></script>
+    <script src="../js/search/search-lunr.js"></script>
+    <script src="../js/search/search_index.js"></script>
+    <script src="../js/lazy-load-graphs.js"></script>
+
+
+</body>
+
+</html>
