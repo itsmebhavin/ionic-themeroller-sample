@@ -1,20 +1,9 @@
 //root rgb colors for icon color values.
-$colorRoles: (primary: 56 128 255,
-secondary: 12 209 232,
-tertiary: 112 68 255,
-success: 16 220 96,
-warning: 255 203 0,
-danger: 241 61 61,
-light: 244 245 248,
-meduim: 152 154 162,
-dark: 34 36 40);
-
+$colorRoles: (primary: 56 128 255, secondary: 12 209 232, tertiary: 112 68 255, success: 16 220 96, warning: 255 203 0, danger: 241 61 61, light: 244 245 248, meduim: 152 154 162, dark: 34 36 40);
 $light-text-default: hsl(0, 100%, 100%);
-$dark-text-default: hsl(0, 100%, 0%); 
-
+$dark-text-default: hsl(0, 100%, 0%);
 // For loop inumerator
 $num: 0;
-
 // Calculate brightness of a given color.
 @function brightness($color) {
     @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
@@ -34,7 +23,6 @@ $num: 0;
 }
 
 :root {
-
     @each $key,
     $value in $colorRoles {
         $color1: rgb(nth($value, 1), nth($value, 2), nth($value, 3));
@@ -49,6 +37,7 @@ $num: 0;
         --icon-color-#{$key}-tint: #{lighten($color1, 10%)};
     }
 }
+
 // Themes over writting variable colors
 .autumn {
     --ion-color-base: #FDE8DF;
@@ -244,6 +233,7 @@ $num: 0;
     --ion-color-light-shade: hsl(317.1, 24.1%, 84.9%);
     --ion-color-light-tint: hsl(317.1, 24.1%, 100%);
 }
+
 // End of theme overrides
 .ion-color-primary {
     --ion-color-base: var(--ion-color-primary, #3880ff);
@@ -325,7 +315,6 @@ $num: 0;
     --ion-color-shade: var(--ion-color-dark-shade, #1e2023);
     --ion-color-tint: var(--ion-color-dark-tint, #383a3e)
 }
-
 
 *::selection {
     background: var(--ion-color-shade, rgba(0, 0, 0, 0.3))

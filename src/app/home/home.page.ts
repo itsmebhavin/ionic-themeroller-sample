@@ -1,12 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { ThemeService } from "../_services/theme/theme.service";
 import { ActionSheetController, AlertController } from "@ionic/angular";
-import { Storage } from "@ionic/storage";
-import { Platform, NavController, LoadingController } from "@ionic/angular";
-import { StatusBar } from "@ionic-native/status-bar/ngx";
-import { Router, ActivatedRoute } from "@angular/router";
 import { TodoService } from "../_services/todo/todo.service";
-
+import { Router } from "@angular/router";
+import { Storage } from "@ionic/storage";
 const themes = {
   autumn: {
     primary: "#F78154",
@@ -40,6 +37,7 @@ const themes = {
   styleUrls: ["home.page.scss"]
 })
 export class HomePage implements OnInit {
+  currentTheme;
   constructor(
     private theme: ThemeService,
     public actionSheetController: ActionSheetController,
@@ -47,7 +45,6 @@ export class HomePage implements OnInit {
     public todoService: TodoService,
     public router: Router
   ) {}
-  currentTheme;
   ngOnInit() {
     this.setGlobalTheme();
   }
@@ -60,7 +57,6 @@ export class HomePage implements OnInit {
     });
     console.log(this.currentTheme);
   }
-
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: "Albums",
@@ -141,6 +137,6 @@ export class HomePage implements OnInit {
   }
 
   searchBarcode() {
-    this.router.navigate(["Barcode"]);
+    this.router.navigate(["barcode"]);
   }
 }
