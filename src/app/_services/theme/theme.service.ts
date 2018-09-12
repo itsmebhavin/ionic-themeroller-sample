@@ -22,8 +22,8 @@ export class ThemeService {
     this.setGlobalCSS(cssText);
     this.storage.set("theme", cssText);
   }
-  setThemeByName(name){
-    this.storage.set('themeName', name);
+  setThemeByName(name) {
+    this.storage.set("themeName", name);
   }
   // Define a single CSS variable
   setVariable(name, value) {

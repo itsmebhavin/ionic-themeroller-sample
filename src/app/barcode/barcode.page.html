@@ -5,8 +5,18 @@
 </ion-header>
 
 <ion-content padding>
-    <barcode-scanner-livestream type="code_128" (valueChanges)="onValueChanges($event)"></barcode-scanner-livestream>
-    <div [hidden]="!barcodeValue">
-        Value:{{barcodeValue}}
+    <div *ngIf="barcode">
+        <label type="success">
+            {{ barcode }}
+        </label>
+    </div>
+    <ion-button color="success" (click)="startScanner()">
+        Scan
+    </ion-button>
+
+    <div class="input-group">
+        <div id="inputBarcode" style="position: static">
+            <div id="interactive" class="viewport"></div>
+        </div>
     </div>
 </ion-content>
