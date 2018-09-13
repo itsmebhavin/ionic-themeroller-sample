@@ -1,4 +1,4 @@
-<ion-header [ngClass]="currentTheme">
+<ion-header >
     <ion-toolbar>
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
@@ -8,8 +8,7 @@
         </ion-title>
     </ion-toolbar>
 </ion-header>
-
-<ion-content padding [ngClass]="currentTheme">
+<ion-content padding>
     <ion-button color="primary" (click)="searchBarcode()">Barcode</ion-button>
     The world is your oyster.
     <p>If you get lost, the
