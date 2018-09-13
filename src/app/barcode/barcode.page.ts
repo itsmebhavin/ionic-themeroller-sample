@@ -15,18 +15,24 @@ export class BarcodePage implements OnInit {
     name: "Live",
     type: "LiveStream",
     target: "#inputBarcode",
+    constraints: {
+      width: 800,
+      height: 200
+    },
     size: 1280,
     numOfWorkers: 8,
+    // locate: true,
     decoder: {
-      readers: ["code_128_reader", "upc_reader", "upc_e_reader"] // List of active readers
-    },
-    locator: {
-      showCanvas: true,
-      showPatches: true,
-      showFoundPatches: true,
-      showSkeleton: true,
-      showLabels: true,
-      showPatchLabels: true
+      readers: ["code_128_reader", "upc_reader"] // List of active readers
+    // },
+    // locator: {
+    //   halfSample: true,
+    //   showCanvas: true,
+    //   showPatches: true,
+    //   showFoundPatches: true,
+    //   showSkeleton: true,
+    //   showLabels: true,
+    //   showPatchLabels: true
     }
   };
 
