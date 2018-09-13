@@ -1,45 +1,45 @@
 import { Component, OnInit } from "@angular/core";
-import { ThemeService } from "../_services/theme/theme.service";
 import { ActionSheetController, AlertController } from "@ionic/angular";
 import { Storage } from "@ionic/storage";
 import { Platform, NavController, LoadingController } from "@ionic/angular";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { Router, ActivatedRoute } from "@angular/router";
 import { TodoService } from "../_services/todo/todo.service";
+import { ThemeService } from "../_services/theme/theme.service";
 
-const themes = {
-  autumn: {
-    primary: "#F78154",
-    secondary: "#4D9078",
-    tertiary: "#B4436C",
-    light: "#FDE8DF",
-    medium: "#FCD0A2",
-    dark: "#B89876"
-  },
-  night: {
-    primary: "#8CBA80",
-    secondary: "#FCFF6C",
-    tertiary: "#FE5F55",
-    medium: "#BCC2C7",
-    dark: "#F7F7FF",
-    light: "#495867"
-  },
-  neon: {
-    primary: "#39BFBD",
-    secondary: "#4CE0B3",
-    tertiary: "#FF5E79",
-    light: "#F4EDF2",
-    medium: "#B682A5",
-    dark: "#34162A"
-  }
-};
+// const themes = {
+//   autumn: {
+//     primary: "#F78154",
+//     secondary: "#4D9078",
+//     tertiary: "#B4436C",
+//     light: "#FDE8DF",
+//     medium: "#FCD0A2",
+//     dark: "#B89876"
+//   },
+//   night: {
+//     primary: "#8CBA80",
+//     secondary: "#FCFF6C",
+//     tertiary: "#FE5F55",
+//     medium: "#BCC2C7",
+//     dark: "#F7F7FF",
+//     light: "#495867"
+//   },
+//   neon: {
+//     primary: "#39BFBD",
+//     secondary: "#4CE0B3",
+//     tertiary: "#FF5E79",
+//     light: "#F4EDF2",
+//     medium: "#B682A5",
+//     dark: "#34162A"
+//   }
+// };
 
 @Component({
   selector: "app-home",
   templateUrl: "home.page.html",
   styleUrls: ["home.page.scss"]
 })
-export class HomePage implements OnInit {
+export class HomePage{
   constructor(
     private theme: ThemeService,
     public actionSheetController: ActionSheetController,
@@ -47,19 +47,7 @@ export class HomePage implements OnInit {
     public todoService: TodoService,
     public router: Router
   ) {}
-  currentTheme;
-  ngOnInit() {
-    this.setGlobalTheme();
-  }
-  async setGlobalTheme() {
-    this.currentTheme = await this.theme.storedThemeName.then(x => {
-      const themeName = x.length === 0 ? { dontSet: false } : { [x]: true };
-      console.log(themeName);
-      console.log("x", x);
-      return themeName;
-    });
-    console.log(this.currentTheme);
-  }
+ 
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
@@ -132,12 +120,9 @@ export class HomePage implements OnInit {
     await alert.present();
   }
 
-  changeTheme(name) {
-    // this.theme.setTheme(themes[name]);
+  changeTheme(name = '') {
     this.theme.setThemeByName(name);
-    this.currentTheme =
-      name.length === 0 ? { dontSet: false } : { [name]: true };
-    // this.setGlobalTheme();
+    this.theme.onThemeChanged.emit(name);
   }
 
   searchBarcode() {
