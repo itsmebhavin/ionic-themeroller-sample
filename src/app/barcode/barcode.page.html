@@ -1,13 +1,18 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>barcode</ion-title>
+        <ion-title>
+            Barcode
+        </ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    <div *ngIf="barcode">
+    <div *ngIf="scanResult">
         <label type="success">
-            {{ barcode }}
+            {{ scanResult }}
         </label>
     </div>
     <ion-button color="success" (click)="startScanner()">
@@ -16,7 +21,7 @@
 
     <div class="input-group">
         <div id="inputBarcode" style="position: static">
-            <div id="interactive" class="viewport"></div>
+            <video #cameraFeed width="500" height="300"></video>
         </div>
     </div>
 </ion-content>

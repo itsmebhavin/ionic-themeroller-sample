@@ -12,19 +12,29 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <link rel="icon" type="image/png" href="assets/icon/favicon.png">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- add to homescreen for ios -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#1976d2">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+        }
+	</style>
+	<script src="assets/barcode-reader/DecoderWorker.js"></script>
+	<script src="assets/barcode-reader/BarcodeReader.js"></script>
+	<script>
+		window.BarcodeReader = BarcodeReader;
+	</script>
 </head>
 
 <body>
     <app-root></app-root>
-    <script src="capacitor.js"></script>
-    <script src="../node_modules/quagga/dist/quagga.min.js"></script>
     <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 

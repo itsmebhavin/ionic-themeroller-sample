@@ -1,37 +1,33 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule, RouteReuseStrategy, Routes } from "@angular/router";
+
 import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
-import { AppComponent } from "./app.component";
-import { AppRoutingModule } from "./app-routing.module";
 import { IonicStorageModule } from "@ionic/storage";
 
-// Application Specific Registration
-import { IntroComponent } from "./intro/intro.component";
-import { HomePageModule } from "./home/home.module";
-import { SplashPageModule } from "./splash/splash.module";
-import { LoginPageModule } from "./login/login.module";
-import { ServicesModule } from "./_services/services.module";
-import { Capacitor } from "@capacitor/core";
+import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
+import { ServicesModule } from "./_services/services.module";
+import { TododetailPageModule } from "./tododetail/tododetail.module";
+import { LoginPageModule } from "./login/login.module";
 import { BarcodePageModule } from "./barcode/barcode.module";
 
 @NgModule({
-  declarations: [AppComponent, IntroComponent],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
+    ServicesModule,
+    TododetailPageModule,
+    LoginPageModule,
+    BarcodePageModule,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
     AppRoutingModule,
-    HomePageModule,
-    SplashPageModule,
-    LoginPageModule,
-    ServicesModule,
-    BarcodePageModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production
     })

@@ -1,18 +1,11 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { IntroComponent } from "./intro/intro.component";
-import { HomePage } from "./home/home.page";
-import { LoginPage } from "./login/login.page";
 import { AuthGuardService } from "./_services/auth/authguard.service";
-
 const routes: Routes = [
-  { path: "", redirectTo: "Login", pathMatch: "full" },
-  { path: "Intro", component: IntroComponent },
-  { path: "Splash", loadChildren: "./splash/splash.module#SplashPageModule" },
-  { path: "Login", loadChildren: "./login/login.module#LoginPageModule" },
-  { path: "Login/:dontcheckintroflag", component: LoginPage },
+  { path: "", redirectTo: "login", pathMatch: "full" },
+  { path: "login", loadChildren: "./login/login.module#LoginPageModule" },
   {
-    path: "Home",
+    path: "home",
     loadChildren: "./home/home.module#HomePageModule",
     canActivate: [AuthGuardService]
   },
@@ -22,7 +15,12 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
-    path: "Barcode",
+    path: "list",
+    loadChildren: "./list/list.module#ListPageModule",
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: "barcode",
     loadChildren: "./barcode/barcode.module#BarcodePageModule",
     canActivate: [AuthGuardService]
   }

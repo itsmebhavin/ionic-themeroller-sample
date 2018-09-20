@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">ionic-themeroller-sample</string>
-    <string name="title_activity_main">ionic-themeroller-sample</string>
-    <string name="package_name">edu.ua.caps.ionicsample</string>
-    <string name="fileprovider_authority">edu.ua.caps.ionicsample.fileprovider</string>
-    <string name="custom_url_scheme">edu.ua.caps.ionicsample</string>
-</resources>
