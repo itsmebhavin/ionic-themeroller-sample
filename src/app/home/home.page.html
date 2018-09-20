@@ -10,10 +10,21 @@
 </ion-header>
 <ion-content padding>
 
-    <ion-button color="primary" (click)="searchBarcode()">Barcode</ion-button>
-    The world is your oyster.
+	<ion-button color="primary" (click)="searchBarcode()">Scan Barcode</ion-button>
+	<div *ngIf="barcode">
+		Scan has succeeded!  Resulting barcode: 
+		<input type="text" *ngIf="barcode" [(ngModel)]="barcode" />
+		<br />
+		<ion-button color="primary">Show Case</ion-button>
+	</div>
+	<br />
+
+	<!-- <br />
+	The world is your oyster.
     <p>If you get lost, the
-        <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+		<a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.
+	</p>
+	<br /> -->
 
     <ion-button expand="block" color="medium" (click)="changeTheme('autumn')">Autumn</ion-button>
     <ion-button expand="block" color="medium" (click)="changeTheme('night')">Dark</ion-button>

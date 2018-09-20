@@ -30,7 +30,12 @@
                 "input": "node_modules/@ionic/angular/dist/ionic/svg",
                 "output": "./svg"
               },
-              "src/manifest.json"
+			  "src/manifest.json",
+			  {
+				  "glob": "**/*",
+				  "input": "node_modules/barcode-reader/src",
+				  "output": "assets/barcode-reader"
+			  }
             ],
             "styles": [
               {
